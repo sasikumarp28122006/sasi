@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sasi Kumar | Video Editor & Visual Artist Portfolio</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description"
+    content="Discover the professional portfolio of Sasi Kumar, specializing in creative video editing, cinematic color grading, photography, and custom audio mixing. Check out my work and contact me for projects.">
+  <meta name="keywords"
+    content="video editor, photographer, visual artist, portfolio, color grading, music video editor, cinematic travel vlog, sasi editor">
+  <meta name="author" content="Sasi Kumar">
+
+  <!-- Favicon placeholder (Uses SVG) -->
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎬</text></svg>">
+
+  <!-- Google Fonts & Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Lucide Icons Library -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+  <!-- Ambient Glowing Blobs -->
+  <div class="bg-blobs">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+
+  <!-- NAVIGATION HEADER -->
+  <header>
+    <a href="#" class="logo">SASI<span>EDITOR</span></a>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#hero" class="active">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#videos">Videos</a></li>
+      <li><a href="#photos">Photos</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li>
+        <button class="admin-trigger" id="admin-trigger-btn">
+          <i data-lucide="sliders"></i> Admin Mode
+        </button>
+      </li>
+    </ul>
+
+    <button class="menu-toggle" id="menu-toggle-btn" aria-label="Toggle Navigation Menu">
+      <i data-lucide="menu"></i>
+    </button>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="hero">
+    <!-- Full-Screen Carousel Background -->
+    <div class="hero-carousel-bg">
+      <div class="carousel-track" id="hero-carousel-track">
+        <!-- Dynamic background image slides injected by JS -->
+      </div>
+
+      <!-- Radial overlay for text readability -->
+      <div class="carousel-overlay"></div>
+
+      <!-- Slide Caption bottom details -->
+      <div class="carousel-caption-bar">
+        <h4 id="carousel-slide-title">Slide Title</h4>
+        <p id="carousel-slide-subtitle">Slide Subtitle</p>
+      </div>
+
+      <!-- Full-Screen Arrow Navigation Controls -->
+      <button type="button" class="carousel-nav-btn prev-btn" id="hero-carousel-prev" aria-label="Previous Slide">
+        <i data-lucide="chevron-left"></i>
+      </button>
+      <button type="button" class="carousel-nav-btn next-btn" id="hero-carousel-next" aria-label="Next Slide">
+        <i data-lucide="chevron-right"></i>
+      </button>
+
+      <!-- Dots indicators -->
+      <div class="carousel-dots" id="hero-carousel-dots">
+        <!-- Dynamic dots injected by JS -->
+      </div>
+    </div>
+
+    <!-- Centered Typographic Intro Content -->
+    <div class="hero-content">
+      <div class="hero-badge">
+        <i data-lucide="sparkles"></i> Available for Freelance & Projects
+      </div>
+      <h1 class="hero-title">I'm <span id="hero-name">Sasi Kumar</span>,<br><span class="gradient-text"
+          id="hero-title-role">Video Editor</span></h1>
+      <div class="typing-text" id="typing-text-field">Creative storytelling through visuals</div>
+
+      <div class="hero-actions">
+        <a href="#videos" class="btn btn-primary">
+          <i data-lucide="play-circle"></i> View My Work
+        </a>
+        <a href="#contact" class="btn btn-secondary">
+          <i data-lucide="mail"></i> Get In Touch
+        </a>
+      </div>
+    </div>
+
+    <a href="#about" class="scroll-indicator" aria-label="Scroll down to About section">
+      <span>Scroll Down</span>
+      <i data-lucide="chevron-down"></i>
+    </a>
+  </section>
+
+  <!-- ABOUT ME SECTION -->
+  <section id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-img-wrap">
+          <img src="" alt="Sasi Kumar" class="about-img" id="about-profile-img">
+        </div>
+
+        <div class="about-info">
+          <div class="section-title-wrap" style="text-align: left; margin-bottom: 25px;">
+            <h2 class="section-title" style="font-size: 2.5rem;">Who is Sasi?</h2>
+          </div>
+          <p class="about-bio" id="about-bio-text">Loading bio details...</p>
+
+          <!-- Quick Statistics -->
+          <div class="stats-grid">
+            <div class="stat-card glass-card">
+              <div class="stat-num" id="stat-exp">2.5+</div>
+              <div class="stat-label">Years Exp</div>
+            </div>
+            <div class="stat-card glass-card">
+              <div class="stat-num" id="stat-projects">70+</div>
+              <div class="stat-label">Projects</div>
+            </div>
+            <div class="stat-card glass-card">
+              <div class="stat-num" id="stat-clients">55</div>
+              <div class="stat-label">Clients</div>
+            </div>
+          </div>
+
+          <!-- Skills Badges -->
+          <h3 class="skills-title"><i data-lucide="tool" style="vertical-align: middle; margin-right: 8px;"></i> Skills
+            & Tools</h3>
+          <div class="skills-list" id="skills-badge-list">
+            <!-- Dynamically populated tags -->
+          </div>
+
+          <div style="margin-top: 35px;">
+            <a href="#" class="btn btn-secondary" id="resume-download-btn">
+              <i data-lucide="download"></i> Download Resume
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEOS GALLERY SECTION -->
+  <section id="videos">
+    <div class="container">
+      <div class="section-title-wrap">
+        <h2 class="section-title">Video Gallery</h2>
+        <p class="section-subtitle">Check out my edited music videos, social reels, corporate promos, and short films.
+        </p>
+      </div>
+
+      <!-- Video Filter Tabs -->
+      <div class="filter-tabs" id="video-filter-tabs">
+        <button class="filter-btn active" data-filter="all">All Videos</button>
+        <button class="filter-btn" data-filter="event-videos">Event Videos</button>
+        <button class="filter-btn" data-filter="event-reels">Event reels</button>
+        <button class="filter-btn" data-filter="shorts">Shorts/Reels</button>
+      </div>
+
+      <!-- Video Grid -->
+      <div class="video-grid" id="video-cards-grid">
+        <!-- Dynamic video cards -->
+      </div>
+    </div>
+  </section>
+
+  <!-- PHOTOS GALLERY SECTION -->
+  <section id="photos">
+    <div class="container">
+      <div class="section-title-wrap">
+        <h2 class="section-title">Photo Gallery</h2>
+        <p class="section-subtitle">Visual snapshots capturing landscapes, portraits, and street style aesthetics.</p>
+      </div>
+
+      <!-- Photo Filter Tabs -->
+      <div class="filter-tabs" id="photo-filter-tabs">
+        <button class="filter-btn active" data-filter="all">All Photos</button>
+        <button class="filter-btn" data-filter="street">Street</button>
+        <button class="filter-btn" data-filter="portraits">Portraits</button>
+        <button class="filter-btn" data-filter="landscapes">Landscapes</button>
+      </div>
+
+      <!-- Photo Grid -->
+      <div class="photo-grid" id="photo-cards-grid">
+        <!-- Dynamic photo cards -->
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- CONTACT SECTION -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-title-wrap">
+        <h2 class="section-title">Let's Connect</h2>
+        <p class="section-subtitle">Have a project in mind or want to collaborate? Reach out to me anytime.</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Contact details -->
+        <div class="contact-info-cards">
+          <div class="contact-card glass-card">
+            <div class="contact-card-icon">
+              <i data-lucide="phone"></i>
+            </div>
+            <div class="contact-card-info">
+              <h4>Phone</h4>
+              <p><a href="tel:+919787230060" id="contact-phone-link">+91 9787230060</a></p>
+            </div>
+          </div>
+
+          <div class="contact-card glass-card">
+            <div class="contact-card-icon">
+              <i data-lucide="mail"></i>
+            </div>
+            <div class="contact-card-info">
+              <h4>Email</h4>
+              <p><a href="mailto:sasikumarp28122006@gmail.com" id="contact-email-link">sasikumarp28122006@gmail.com</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="contact-card glass-card">
+            <div class="contact-card-icon">
+              <i data-lucide="map-pin"></i>
+            </div>
+            <div class="contact-card-info">
+              <h4>Location</h4>
+              <p id="contact-location-text">Melmaruvathur, chengalpattu district 603 319   Tamil Nadu, India</p>
+            </div>
+          </div>
+
+          <!-- Socials -->
+          <div class="social-links-wrap">
+            <h3 class="social-links-title">Follow Me</h3>
+            <div class="social-icons" id="social-icons-list">
+              <!-- Dynamic socials icons -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form glass-card">
+          <form id="portfolio-contact-form">
+            <div class="form-group">
+              <label for="form-name" class="form-label">Full Name</label>
+              <input type="text" id="form-name" class="form-control" placeholder="John Doe" required>
+            </div>
+
+            <div class="form-group">
+              <label for="form-email" class="form-label">Email Address</label>
+              <input type="email" id="form-email" class="form-control" placeholder="john@example.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="form-message" class="form-label">Your Message</label>
+              <textarea id="form-message" class="form-control" placeholder="Tell me about your project detail..."
+                required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
+              <i data-lucide="send"></i> Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-content">
+      <p class="logo" style="font-size: 1.4rem;">SASI<span>EDITOR</span></p>
+      <p class="footer-text">© <span id="footer-year">2026</span> Sasi Kumar. All Rights Reserved. Crafted for Visual
+        Creators.</p>
+    </div>
+  </footer>
+
+  <!-- VIDEO MODAL PLAYER OVERLAY -->
+  <div class="modal-overlay" id="video-player-modal">
+    <button class="modal-close-btn" id="close-video-modal-btn" aria-label="Close Player">
+      <i data-lucide="x"></i>
+    </button>
+    <div class="video-modal-content">
+      <iframe src="" id="modal-video-iframe" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <video src="" id="modal-video-element" controls autoplay style="display: none; width: 100%; height: 100%; max-height: 100%; background: #000; border-radius: 8px; border: none;"></video>
+    </div>
+  </div>
+
+  <!-- PHOTO LIGHTBOX OVERLAY -->
+  <div class="modal-overlay" id="photo-lightbox-modal">
+    <button class="modal-close-btn" id="close-photo-modal-btn" aria-label="Close Lightbox">
+      <i data-lucide="x"></i>
+    </button>
+    <div style="display: flex; flex-direction: column; align-items: center; max-width: 90%;">
+      <div class="lightbox-content">
+        <img src="" alt="Lightbox image" class="lightbox-img" id="lightbox-img-element">
+      </div>
+      <div class="lightbox-caption" id="lightbox-caption-text">Caption Details</div>
+    </div>
+  </div>
+
+  <!-- ADMIN CUSTOMIZATION MODAL -->
+  <div class="modal-overlay admin-modal" id="admin-settings-modal">
+    <div class="admin-panel">
+
+      <div class="admin-header">
+        <h2><i data-lucide="sliders-horizontal"></i> Visual Admin Panel</h2>
+        <button class="modal-close-btn" style="position: static; width: 40px; height: 40px; font-size: 1.2rem;"
+          id="close-admin-modal-btn" aria-label="Close Dashboard">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+
+      <!-- Navigation Tabs inside panel -->
+      <div class="admin-tabs">
+        <button class="admin-tab-btn active" data-tab="tab-profile">Profile Info</button>
+        <button class="admin-tab-btn" data-tab="tab-skills-socials">Skills & Socials</button>
+        <button class="admin-tab-btn" data-tab="tab-videos">Manage Videos</button>
+        <button class="admin-tab-btn" data-tab="tab-photos">Manage Photos</button>
+        <button class="admin-tab-btn" data-tab="tab-carousel">Manage Carousel</button>
+      </div>
+
+      <form id="admin-config-form">
+
+        <!-- Tab 1: Profile Details -->
+        <div class="admin-tab-content active" id="tab-profile">
+          <div class="admin-field-row">
+            <div class="form-group">
+              <label class="form-label" for="admin-name">Full Name</label>
+              <input type="text" id="admin-name" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="admin-title">Role Title</label>
+              <input type="text" id="admin-title" class="form-control" required>
+            </div>
+          </div>
+          <div class="admin-field-row">
+            <div class="form-group">
+              <label class="form-label" for="admin-subtitle">Subtitle Tagline</label>
+              <input type="text" id="admin-subtitle" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="admin-profile-img">Profile Image URL</label>
+              <input type="text" id="admin-profile-img" class="form-control" required>
+              <p class="admin-help-text">Can be a local path like <code>images/profile.jpg</code> or an Unsplash / image
+                link.</p>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="admin-about">About Me Biography</label>
+            <textarea id="admin-about" class="form-control" required style="min-height: 120px;"></textarea>
+          </div>
+          <div class="admin-field-row">
+            <div class="form-group">
+              <label class="form-label" for="admin-stat-exp">Experience (e.g. 5+)</label>
+              <input type="text" id="admin-stat-exp" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="admin-stat-projects">Projects Done (e.g. 150+)</label>
+              <input type="text" id="admin-stat-projects" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="admin-stat-clients">Happy Clients (e.g. 80+)</label>
+              <input type="text" id="admin-stat-clients" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="admin-resume-url">Resume Download URL</label>
+              <input type="text" id="admin-resume-url" class="form-control">
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 2: Skills & Social Links -->
+        <div class="admin-tab-content" id="tab-skills-socials">
+          <div class="form-group">
+            <label class="form-label" for="admin-skills">Skills & Tools (Comma-separated)</label>
+            <input type="text" id="admin-skills" class="form-control"
+              placeholder="Video Editing, Color Grading, Photoshop">
+            <p class="admin-help-text">Separate tags using a comma. E.g.,
+              <code>Video Editing, After Effects, DaVinci</code></p>
+          </div>
+
+          <h3 style="margin: 25px 0 15px 0; color: var(--accent-cyan); font-size: 1.2rem;">Contact Channels</h3>
+          <div class="admin-field-row">
+            <div class="form-group">
+              <label class="form-label" for="admin-phone">Contact Phone Number</label>
+              <input type="text" id="admin-phone" class="form-control">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="admin-email">Contact Email Address</label>
+              <input type="email" id="admin-email" class="form-control">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="admin-location">Location Address</label>
+            <input type="text" id="admin-location" class="form-control">
+          </div>
+
+          <h3 style="margin: 25px 0 15px 0; color: var(--accent-magenta); font-size: 1.2rem;">Social Links</h3>
+          <div class="admin-field-row">
+            <div class="form-group">
+              <label class="form-label" for="admin-social-instagram">Instagram URL</label>
+              <input type="text" id="admin-social-instagram" class="form-control"
+                placeholder="https://instagram.com/...">
+            </div>
+          </div>
+          <div class="admin-field-row">
+            <div class="form-group">
+              <label class="form-label" for="admin-social-whatsapp">WhatsApp Link</label>
+              <input type="text" id="admin-social-whatsapp" class="form-control" placeholder="https://wa.me/...">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="admin-social-behance">Behance URL</label>
+              <input type="text" id="admin-social-behance" class="form-control" placeholder="https://behance.net/...">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="admin-social-twitter">Twitter / X URL</label>
+            <input type="text" id="admin-social-twitter" class="form-control" placeholder="https://twitter.com/...">
+          </div>
+        </div>
+
+        <!-- Tab 3: Manage Videos -->
+        <div class="admin-tab-content" id="tab-videos">
+          <div class="admin-list-editor">
+            <div class="admin-list-header">
+              <h4 style="font-size: 1.1rem; color: var(--color-text);">Video Portfolio items</h4>
+              <button type="button" class="btn btn-secondary" style="padding: 8px 16px; font-size: 0.85rem;"
+                id="admin-add-video-btn">
+                <i data-lucide="plus" style="width: 16px; height: 16px;"></i> Add Video Track
+              </button>
+            </div>
+
+            <div class="admin-list-items" id="admin-videos-list-container">
+              <!-- Dynamically rendered rows of video forms -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 4: Manage Photos -->
+        <div class="admin-tab-content" id="tab-photos">
+          <div class="admin-list-editor">
+            <div class="admin-list-header">
+              <h4 style="font-size: 1.1rem; color: var(--color-text);">Photo Portfolio items</h4>
+              <button type="button" class="btn btn-secondary" style="padding: 8px 16px; font-size: 0.85rem;"
+                id="admin-add-photo-btn">
+                <i data-lucide="plus" style="width: 16px; height: 16px;"></i> Add Photo
+              </button>
+            </div>
+
+            <div class="admin-list-items" id="admin-photos-list-container">
+              <!-- Dynamically rendered rows of photo forms -->
+            </div>
+          </div>
+        </div>
+
+
+
+        <!-- Tab 6: Manage Carousel -->
+        <div class="admin-tab-content" id="tab-carousel">
+          <div class="admin-list-editor">
+            <div class="admin-list-header">
+              <h4 style="font-size: 1.1rem; color: var(--color-text);">Hero Carousel Slides</h4>
+              <button type="button" class="btn btn-secondary" style="padding: 8px 16px; font-size: 0.85rem;"
+                id="admin-add-slide-btn">
+                <i data-lucide="plus" style="width: 16px; height: 16px;"></i> Add Slide
+              </button>
+            </div>
+
+            <div class="admin-list-items" id="admin-carousel-list-container">
+              <!-- Dynamically rendered rows of slide forms -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel Controls -->
+        <div class="admin-actions">
+          <button type="button" class="btn btn-secondary" id="admin-cancel-btn">Close Without Saving</button>
+
+          <button type="button" class="btn btn-secondary"
+            style="border-color: var(--accent-magenta); color: var(--color-text);" id="admin-copy-config-btn">
+            <i data-lucide="copy"></i> Copy config code
+          </button>
+
+          <button type="submit" class="btn btn-primary">
+            <i data-lucide="save"></i> Save Changes Live
+          </button>
+
+          <button type="button" class="btn btn-glow-cyan" id="admin-export-file-btn">
+            <i data-lucide="download-cloud"></i> Export config.js
+          </button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+  <!-- LOAD CONFIG DATA FIRST, THEN MAIN JS SCRIPT -->
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>

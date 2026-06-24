@@ -1,0 +1,137 @@
+// PORTFOLIO CONFIGURATION DATA
+// This file contains all the content displayed on your website.
+// You can edit this directly or use the visual Admin Dashboard on your website to update it!
+
+const portfolioConfig = {
+  profile: {
+    name: "Sasi",
+    title: "Video Editor & Graphic Designer",
+    subtitle: "Creating Professional & Eye-Catching Content",
+    aboutText: "Hello! I'm Sasi, a freelance Video Editor and Graphic Designer dedicated to creating professional and eye-catching content. I focus on delivering high-quality work with attention to detail, creativity, and on-time delivery. Whether you need engaging social media reels, professional videos, attractive posters, or document designs, I am ready to help bring your ideas to life.",
+    experienceYears: "2.5+",
+    projectsCompleted: "70+",
+    happyClients: "55",
+    skills: [
+      "Video Editing",
+      "Color Grading",
+      "Reels & Short Video Editing",
+      "Shop Poster Design",
+      "Document & Certificate Editing",
+      "DaVinci Resolve",
+      "Lightroom",
+      "CapCut",
+      "Picsart",
+      "Adobe Premiere Pro",
+      "Adobe After Effects",
+      "Canva",
+      "Adobe Photoshop"
+    ],
+    resumeUrl: "#", // Add your resume link here if you have one
+    profileImage: "sasi_profile.jpg"
+  },
+  contact: {
+    phone: "+91 9787230060",
+    email: "sasikumarp28122006@gmail.com",
+    address: "Melmaruvathur, chengalpattu district 603 319   Tamil Nadu, India",
+    socials: {
+      instagram: "https://www.instagram.com/sasiii_editz?igsh=NHI4NzYxN3FxNWJr",
+      whatsapp: "https://whatsapp.com/dl/"
+    }
+  },
+  videos: [
+    {
+      id: "vid-1",
+      title: "Takshashila university event TAKSHAK 2026",
+      description: "Professional coverage of the Takshashila university event TAKSHAK 2026, capturing stage performances, crowd energy, and highlight moments.",
+      category: "event-videos",
+      videoUrl: "VID_20260624_005809_508.mp4",
+      thumbnail: "chatgpt_thumbnail_1.png"
+    },
+    {
+      id: "vid-2",
+      title: "Event reels TAKSHAK 2026",
+      description: "High-energy promotional reel and short cuts from the TAKSHAK 2026 university event.",
+      category: "event-reels",
+      videoUrl: "Event_TAKSHAK_2026.mp4",
+      thumbnail: "chatgpt_thumbnail_2.png"
+    },
+    {
+      id: "vid-4",
+      title: "Fast Paced Fashion Reel",
+      description: "A 9:16 portrait format Instagram reel showcasing quick clothing cuts, light flashes, and high-frequency sound design.",
+      category: "shorts",
+      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ", // YouTube embed link
+      thumbnail: "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&q=80&w=800"
+    }
+  ],
+  photos: [
+    {
+      id: "photo-1",
+      title: "Tokyo Cyberpunk",
+      category: "street",
+      imageUrl: "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&q=80&w=800",
+      description: "Shinjuku streets captured during a rainy night with vibrant neon reflections."
+    },
+    {
+      id: "photo-2",
+      title: "Golden Hour Portrait",
+      category: "portraits",
+      imageUrl: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=800",
+      description: "Warm sunset backlight portrait focusing on soft skin tones and depth of field."
+    },
+    {
+      id: "photo-3",
+      title: "Mountain Majesty",
+      category: "landscapes",
+      imageUrl: "https://images.unsplash.com/photo-1454496522488-7a8e488e8606?auto=format&fit=crop&q=80&w=800",
+      description: "Snow-covered peaks in Switzerland captured during sunrise."
+    },
+    {
+      id: "photo-4",
+      title: "Abstract Neon Lights",
+      category: "street",
+      imageUrl: "https://images.unsplash.com/photo-1550684848-fac1c5b4e853?auto=format&fit=crop&q=80&w=800",
+      description: "Long exposure light trails capturing urban movement."
+    },
+    {
+      id: "photo-5",
+      title: "Melancholic Rain",
+      category: "portraits",
+      imageUrl: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&q=80&w=800",
+      description: "Cinematic portrait shot through a glass window covered in rain droplets."
+    },
+    {
+      id: "photo-6",
+      title: "Forest Solitude",
+      category: "landscapes",
+      imageUrl: "https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&q=80&w=800",
+      description: "Light rays piercing through tall redwood trees in the morning mist."
+    }
+  ],
+  carousel: [
+    {
+      id: "slide-1",
+      imageUrl: "https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?auto=format&fit=crop&q=80&w=1000",
+      title: "Cinematic Color Grading",
+      subtitle: "DaVinci Resolve Studio"
+    },
+    {
+      id: "slide-2",
+      imageUrl: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&q=80&w=1000",
+      title: "Creative Storytelling",
+      subtitle: "Visual Art & Photography"
+    },
+    {
+      id: "slide-3",
+      imageUrl: "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&q=80&w=1000",
+      title: "Cinematography & Directing",
+      subtitle: "Professional Camera Work"
+    },
+    {
+      id: "slide-4",
+      imageUrl: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=1000",
+      title: "Post Production Workspace",
+      subtitle: "Premiere Pro & After Effects"
+    }
+  ]
+};
