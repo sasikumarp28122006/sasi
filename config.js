@@ -67,17 +67,17 @@ const portfolioConfig = {
   photos: [
     {
       id: "photo-1",
-      title: "Tokyo Cyberpunk",
-      category: "street",
-      imageUrl: "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&q=80&w=800",
-      description: "Shinjuku streets captured during a rainy night with vibrant neon reflections."
+      title: "College Event photographer",
+      category: "portraits",
+      imageUrl: "college_event_1.jpg",
+      description: "Professional event photography capturing vibrant campus moments and stage events."
     },
     {
       id: "photo-2",
-      title: "Golden Hour Portrait",
+      title: "college events photographer",
       category: "portraits",
-      imageUrl: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=800",
-      description: "Warm sunset backlight portrait focusing on soft skin tones and depth of field."
+      imageUrl: "college_event_2.jpg",
+      description: "Documenting key festivals, academic gatherings, and student life highlights."
     },
     {
       id: "photo-3",
