@@ -78,13 +78,6 @@ const portfolioConfig = {
       category: "portraits",
       imageUrl: "college_event_2.jpg",
       description: "Documenting key festivals, academic gatherings, and student life highlights."
-    },
-    {
-      id: "photo-4",
-      title: "Abstract Neon Lights",
-      category: "street",
-      imageUrl: "https://images.unsplash.com/photo-1550684848-fac1c5b4e853?auto=format&fit=crop&q=80&w=800",
-      description: "Long exposure light trails capturing urban movement."
     }
   ],
   carousel: [

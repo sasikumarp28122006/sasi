@@ -674,7 +674,6 @@ document.addEventListener('DOMContentLoaded', () => {
           <div class="admin-field-row" style="margin-bottom:8px;">
             <input type="text" class="form-control admin-photo-title" value="${photo.title}" placeholder="Photo Title" required>
             <select class="form-control admin-photo-cat" style="padding:10px;">
-              <option value="street" ${photo.category === 'street' ? 'selected' : ''}>Street</option>
               <option value="portraits" ${photo.category === 'portraits' ? 'selected' : ''}>Portrait</option>
             </select>
           </div>
@@ -703,7 +702,7 @@ document.addEventListener('DOMContentLoaded', () => {
     tempConfig.photos.push({
       id: 'photo-' + Date.now(),
       title: 'New Snapshot',
-      category: 'street',
+      category: 'portraits',
       imageUrl: 'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&q=80&w=800',
       description: 'Short photograph description details.'
     });
