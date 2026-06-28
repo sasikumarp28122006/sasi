@@ -33,6 +33,7 @@ const portfolioConfig = {
     phone: "+91 9787230060",
     email: "sasikumarp28122006@gmail.com",
     address: "Melmaruvathur, chengalpattu district 603 319   Tamil Nadu, India",
+    googleSheetUrl: "", // Paste your Google Apps Script Web App URL here to store form submissions directly in a Google Sheet!
     socials: {
       instagram: "https://www.instagram.com/sasiii_editz?igsh=NHI4NzYxN3FxNWJr",
       whatsapp: "https://whatsapp.com/dl/"

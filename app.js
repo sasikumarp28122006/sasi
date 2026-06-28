@@ -532,9 +532,48 @@ document.addEventListener('DOMContentLoaded', () => {
     const name = document.getElementById('form-name').value;
     const email = document.getElementById('form-email').value;
     const msg = document.getElementById('form-message').value;
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
     
-    alert(`Thank you, ${name}! Your message has been sent successfully. Sasi will contact you at ${email} shortly.`);
-    contactForm.reset();
+    const sheetUrl = localConfig.contact.googleSheetUrl;
+    if (sheetUrl && sheetUrl.startsWith('http')) {
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i data-lucide="loader"></i> Sending...';
+        lucide.createIcons();
+      }
+      
+      fetch(sheetUrl, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          timestamp: new Date().toLocaleString(),
+          name: name,
+          email: email,
+          message: msg
+        })
+      })
+      .then(() => {
+        alert(`Thank you, ${name}! Your message has been saved to the spreadsheet successfully. Sasi will contact you at ${email} shortly.`);
+        contactForm.reset();
+      })
+      .catch(err => {
+        console.error("Form submission failed:", err);
+        alert("Oops! There was a network issue saving your message. Please try again or contact directly.");
+      })
+      .finally(() => {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = '<i data-lucide="send"></i> Send Message';
+          lucide.createIcons();
+        }
+      });
+    } else {
+      alert(`Thank you, ${name}! Your message has been sent successfully. Sasi will contact you at ${email} shortly.`);
+      contactForm.reset();
+    }
   });
 
   // ==========================================
@@ -596,6 +635,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('admin-phone').value = tempConfig.contact.phone;
     document.getElementById('admin-email').value = tempConfig.contact.email;
     document.getElementById('admin-location').value = tempConfig.contact.address;
+    document.getElementById('admin-google-sheet-url').value = tempConfig.contact.googleSheetUrl || '';
     
     document.getElementById('admin-social-instagram').value = tempConfig.contact.socials.instagram || '';
     document.getElementById('admin-social-whatsapp').value = tempConfig.contact.socials.whatsapp || '';
@@ -779,6 +819,7 @@ document.addEventListener('DOMContentLoaded', () => {
     tempConfig.contact.phone = document.getElementById('admin-phone').value;
     tempConfig.contact.email = document.getElementById('admin-email').value;
     tempConfig.contact.address = document.getElementById('admin-location').value;
+    tempConfig.contact.googleSheetUrl = document.getElementById('admin-google-sheet-url').value;
     
     tempConfig.contact.socials.instagram = document.getElementById('admin-social-instagram').value;
     tempConfig.contact.socials.whatsapp = document.getElementById('admin-social-whatsapp').value;
