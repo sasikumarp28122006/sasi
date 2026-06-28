@@ -284,13 +284,10 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('contact-email-link').href = `mailto:${email}`;
     document.getElementById('contact-location-text').textContent = address;
     
-    // Map socials icon key name
-    const iconMap = {
-      youtube: 'youtube',
-      instagram: 'instagram',
-      whatsapp: 'phone-call',
-      behance: 'briefcase',
-      twitter: 'twitter'
+    // Map socials to direct SVG markup for perfect logo rendering
+    const customIcons = {
+      instagram: '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>',
+      whatsapp: '<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" style="vertical-align: middle;"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.73-1.45L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.965C16.528 1.977 14.07 1.01 11.532 1.01c-5.436 0-9.861 4.372-9.865 9.802-.001 1.73.457 3.419 1.328 4.921l-.975 3.565 3.65-.958zm12.576-7.38c-.328-.163-1.94-.959-2.24-1.07-.3-.11-.519-.165-.736.165-.217.33-.84.825-1.028 1.019-.19.19-.377.218-.705.054-.327-.163-1.385-.51-2.637-1.627-.975-.87-1.632-1.947-1.823-2.274-.19-.33-.02-.507.144-.67.147-.146.328-.382.492-.573.164-.19.219-.327.328-.545.11-.219.054-.41-.028-.573-.082-.164-.736-1.77-.993-2.39-.251-.602-.52-.519-.736-.53-.19-.01-.41-.01-.628-.01-.218 0-.573.082-.873.41-.3.33-1.148 1.12-1.148 2.73s1.175 3.167 1.339 3.385c.164.218 2.312 3.529 5.599 4.95.782.338 1.393.54 1.87.691.785.25 1.5.214 2.065.129.63-.095 1.94-.793 2.213-1.56.273-.769.273-1.428.19-1.56-.082-.132-.3-.218-.628-.382z"/></svg>'
     };
     
     Object.keys(socials).forEach(key => {
@@ -299,9 +296,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const a = document.createElement('a');
         a.href = url;
         a.target = '_blank';
-        a.className = 'social-icon-btn';
+        a.className = `social-icon-btn ${key}`;
         a.ariaLabel = `Visit ${key}`;
-        a.innerHTML = `<i data-lucide="${iconMap[key] || 'external-link'}"></i>`;
+        a.innerHTML = customIcons[key] || `<i data-lucide="external-link"></i>`;
         socialContainer.appendChild(a);
       }
     });
