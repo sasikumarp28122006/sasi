@@ -55,14 +55,6 @@ const portfolioConfig = {
       category: "event-reels",
       videoUrl: "Event_TAKSHAK_2026.mp4",
       thumbnail: "chatgpt_thumbnail_2.png"
-    },
-    {
-      id: "vid-4",
-      title: "Fast Paced Fashion Reel",
-      description: "A 9:16 portrait format Instagram reel showcasing quick clothing cuts, light flashes, and high-frequency sound design.",
-      category: "shorts",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ", // YouTube embed link
-      thumbnail: "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&q=80&w=800"
     }
   ],
   photos: [

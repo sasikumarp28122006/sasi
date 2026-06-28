@@ -660,7 +660,6 @@ document.addEventListener('DOMContentLoaded', () => {
             <select class="form-control admin-vid-cat" style="padding:10px;">
               <option value="event-videos" ${vid.category === 'event-videos' ? 'selected' : ''}>Event Video</option>
               <option value="event-reels" ${vid.category === 'event-reels' ? 'selected' : ''}>Event Reel</option>
-              <option value="shorts" ${vid.category === 'shorts' ? 'selected' : ''}>Short/Reel</option>
             </select>
           </div>
           <div class="admin-field-row" style="margin-bottom:8px;">
