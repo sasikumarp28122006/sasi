@@ -676,7 +676,6 @@ document.addEventListener('DOMContentLoaded', () => {
             <select class="form-control admin-photo-cat" style="padding:10px;">
               <option value="street" ${photo.category === 'street' ? 'selected' : ''}>Street</option>
               <option value="portraits" ${photo.category === 'portraits' ? 'selected' : ''}>Portrait</option>
-              <option value="landscapes" ${photo.category === 'landscapes' ? 'selected' : ''}>Landscape</option>
             </select>
           </div>
           <div class="admin-field-row" style="margin-bottom:8px;">

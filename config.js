@@ -80,32 +80,11 @@ const portfolioConfig = {
       description: "Documenting key festivals, academic gatherings, and student life highlights."
     },
     {
-      id: "photo-3",
-      title: "Mountain Majesty",
-      category: "landscapes",
-      imageUrl: "https://images.unsplash.com/photo-1454496522488-7a8e488e8606?auto=format&fit=crop&q=80&w=800",
-      description: "Snow-covered peaks in Switzerland captured during sunrise."
-    },
-    {
       id: "photo-4",
       title: "Abstract Neon Lights",
       category: "street",
       imageUrl: "https://images.unsplash.com/photo-1550684848-fac1c5b4e853?auto=format&fit=crop&q=80&w=800",
       description: "Long exposure light trails capturing urban movement."
-    },
-    {
-      id: "photo-5",
-      title: "Melancholic Rain",
-      category: "portraits",
-      imageUrl: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&q=80&w=800",
-      description: "Cinematic portrait shot through a glass window covered in rain droplets."
-    },
-    {
-      id: "photo-6",
-      title: "Forest Solitude",
-      category: "landscapes",
-      imageUrl: "https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&q=80&w=800",
-      description: "Light rays piercing through tall redwood trees in the morning mist."
     }
   ],
   carousel: [
